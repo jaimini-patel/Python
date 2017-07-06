@@ -12,7 +12,7 @@ def getjanid(jemail, juuid):
         r = requests.get(
             'https://test.barcodeservices.ccnag.com/rest/v1/janrainScanner?email=' + jemail + '&handle=&UUID=' + juuid + '&search=Search+Janrain', verify=False)
         if r.status_code == 200:
-            soup = BeautifulSoup(r.text)
+            soup = BeautifulSoup(r.text,"html.parser")
             # print("uuid: ", soup.find("uuid").string")
             #print("email: ", soup.find('yweather:condition')['temp'])
             #print("email: ", soup.find("email").string)
@@ -20,7 +20,7 @@ def getjanid(jemail, juuid):
             janremail = soup.find("email").string
             janresult = str(januuid) + str(",") + str(janremail)
             #print(" {}".format(janresult))
-            file = open("C:\Myproject\Automation\output.txt", "a")
+            file = open("D:\Coke - Freestyle\GitHub_Python\Python\output.txt", "a")
             print(janresult)
             file.write(janresult + "\n")
             file.close()
