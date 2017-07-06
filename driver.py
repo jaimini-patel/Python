@@ -22,7 +22,7 @@ data = [[sheet.cell_value(r, c) for c in range(sheet.ncols)]
         for r in range(sheet.nrows)]
 
 for svar in data:
-    if svar[0] == 'Y':
+    if svar[0] != 'Y':
         continue
 
     jemail = svar[1]
