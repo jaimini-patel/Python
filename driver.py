@@ -6,9 +6,9 @@ import getjanid
 # import xlrd for writing to the excel file
 #import xlwt
 # access test data excel
-filename = "C:\Myproject\Automation\examples1.xlsx"
+filename = "D:\Coke - Freestyle\GitHub_Python\Python\janRain.xlsx"
 sheetnames = "testresult"
-file_location = "C:\Myproject\Automation\examples.xlsx"
+file_location = "D:\Coke - Freestyle\GitHub_Python\Python\janRain.xlsx"
 workbook = xlrd.open_workbook(file_location)
 
 # making a writable copy of open excel file
