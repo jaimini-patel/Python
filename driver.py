@@ -26,6 +26,7 @@ for svar in data:
         continue
 
     jemail = svar[1]
-    # print(jemail)
+    print(jemail)
     juuid = svar[2]
+    print(juuid)
     getjanid.getjanid(jemail, juuid)
